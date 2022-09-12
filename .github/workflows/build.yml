@@ -1,0 +1,12 @@
+name: Demo workflow for Consuming Secrets
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Echo Secret
+        run: echo ${{ sectets.HELLO_WORLD }}

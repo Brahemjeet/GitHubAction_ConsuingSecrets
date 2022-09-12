@@ -11,4 +11,4 @@ jobs:
       - name: Echo Secret
         env:
           hello_world : ${{ secrets.HELLO_WORLD }}
-        run: echo ${{ env.HELLO_WORLD }}
+        run: echo ${{ env.hello_world }}

@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Echo Secret
-        run: echo ${{ secrets.HELLO_WORLD }}
+        env:
+          hello_world : ${{ secrets.HELLO_WORLD }}
+        run: echo ${{ env.HELLO_WORLD }}
